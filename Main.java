@@ -28,7 +28,7 @@ public class Main {
 
 			ThreadGroup searches = new ThreadGroup("parent");
   
-        	ThreadGroup searches_child = new ThreadGroup(searches, "child");
+        	//ThreadGroup searches_child = new ThreadGroup(searches, "child");
 
 			//start 4 threads
 			HillThread t1 = new HillThread("one", searches, n);

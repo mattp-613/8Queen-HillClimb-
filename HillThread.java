@@ -19,18 +19,15 @@ public class HillThread extends Thread{
 
         HillClimbingSearch hcs = new HillClimbingSearch(n);
 	        
+        try{
         hcs.runSearch();
-        
         if (hcs.getFinalSolution() != null){
-
-            try{
             System.out.println("THREAD " + threadname+ " HAS ACQUIRED THE SOLUTION: ");
             hcs.printState(hcs.getFinalSolution());
-            group.interrupt();
-            }   catch(Exception e) {
-                System.out.print(Thread.currentThread().getName());
-                System.out.println(" CEASED SOLVING.");
-                }
+            group.interrupt(); //this doesn't kill the other threads
+            }
+        } catch(Exception e){
+            System.out.println("THREAD " + threadname + " CEASED SOLVING.");
         }
     }
 }
