@@ -31,10 +31,10 @@ public class Main {
         	ThreadGroup searches_child = new ThreadGroup(searches, "child");
 
 			//start 4 threads
-			HillThread t1 = new HillThread("one", searches);
-			HillThread t2 = new HillThread("two", searches);
-			HillThread t3 = new HillThread("three", searches);
-			HillThread t4 = new HillThread("four", searches);
+			HillThread t1 = new HillThread("one", searches, n);
+			HillThread t2 = new HillThread("two", searches, n);
+			HillThread t3 = new HillThread("three", searches, n);
+			HillThread t4 = new HillThread("four", searches, n);
 
 	        HillClimbingSearch hcs = new HillClimbingSearch(n);
 	        
