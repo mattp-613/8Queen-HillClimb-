@@ -3,10 +3,10 @@ import java.util.Random;
 
 
 public class HillClimbingSearch {
-    private int n ;
-    private int heuristic = 0;
-    private int presentHeuristic;
-    private NQueen[] finalSolution;
+    public int n ;
+    public int heuristic = 0;
+    public int presentHeuristic;
+    public NQueen[] finalSolution;
     
     public  HillClimbingSearch (int size) {
     	n = size;	
