@@ -30,6 +30,7 @@ public class HillThread extends Thread{
         }
 
             hcs.finalSolution = presentBoard;
+
             if (hcs.getFinalSolution() != null && !Thread.currentThread().isInterrupted()){
                 System.out.println("THREAD " + threadname+ " HAS ACQUIRED THE SOLUTION: ");
                 hcs.printState(hcs.getFinalSolution());

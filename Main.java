@@ -49,9 +49,11 @@ public class Main {
 
 			System.out.println(searches.activeCount());
 
-			searches.interrupt();
 
 			while(searches.activeCount() != 0){ //this is to keep it waiting until all threads are complete. bad solution
+				if(searches.activeCount() < 4){ //most important part!!!!
+					searches.interrupt();
+				}
 			}
 			long timestamp2 = System.currentTimeMillis();
 				
