@@ -30,7 +30,7 @@ public class HillThread extends Thread{
             }   catch(Exception e) {
                 System.out.print(Thread.currentThread().getName());
                 System.out.println(" CEASED SOLVING.");
-      }
+                }
         }
     }
 }

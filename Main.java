@@ -36,21 +36,25 @@ public class Main {
 			HillThread t3 = new HillThread("three", searches, n);
 			HillThread t4 = new HillThread("four", searches, n);
 
-	        HillClimbingSearch hcs = new HillClimbingSearch(n);
+	        //HillClimbingSearch hcs = new HillClimbingSearch(n);
 	        
-	        hcs.runSearch();
+	        //hcs.runSearch();
 	        
-	        if (hcs.getFinalSolution() != null)
-	        	hcs.printState(hcs.getFinalSolution());
+	        //if (hcs.getFinalSolution() != null)
+	        //	hcs.printState(hcs.getFinalSolution());
 	        
 	        
 	        
 	        //Printing the solution
-	        long timestamp2 = System.currentTimeMillis();
-			
+
+			System.out.println(searches.activeCount());
+
+			while(searches.activeCount() != 0){ //this is to keep it waiting until all threads are complete. bad solution
+			}
+			long timestamp2 = System.currentTimeMillis();
+				
 			long timeDiff = timestamp2 - timestamp1;
 			System.out.println("Execution Time: "+timeDiff+" ms");
-	        
 	       
 	    }
 }
