@@ -1,6 +1,5 @@
 import java.util.Scanner;
-
- 
+import java.lang.ThreadGroup;
 public class Main {
 	
 	
@@ -25,6 +24,18 @@ public class Main {
 	        
 	        System.out.println("Solution to "+ n +" queens using hill climbing search:");
 	        
+			//Multithread begins here
+
+			ThreadGroup searches = new ThreadGroup("parent");
+  
+        	ThreadGroup searches_child = new ThreadGroup(searches, "child");
+
+			//start 4 threads
+			HillThread t1 = new HillThread("one", searches);
+			HillThread t2 = new HillThread("two", searches);
+			HillThread t3 = new HillThread("three", searches);
+			HillThread t4 = new HillThread("four", searches);
+
 	        HillClimbingSearch hcs = new HillClimbingSearch(n);
 	        
 	        hcs.runSearch();
