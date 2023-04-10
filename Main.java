@@ -50,8 +50,8 @@ public class Main {
 			System.out.println(searches.activeCount());
 
 
-			while(searches.activeCount() != 0){ //this is to keep it waiting until all threads are complete. bad solution
-				if(searches.activeCount() < 4){ //most important part!!!!
+			while(searches.activeCount() != 0){ //this is to keep it waiting until all threads are complete
+				if(searches.activeCount() < 4){ //most important part!!!! kill the rest once one is finished
 					searches.interrupt();
 				}
 			}
